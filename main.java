@@ -70,6 +70,9 @@ class multiply {
                 break;
         }
 
+        int G = 245; 
+        int y = 3;
+
         scanner.close();
     }
 }
