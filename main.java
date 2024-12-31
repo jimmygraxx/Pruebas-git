@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        int a = 0; 
+        int b = 0;
+        int c = 0;
+        a = 5;
     }
 }
 // hazme un calculadora que sume, reste, multiplique y divida
@@ -26,9 +30,37 @@ class Calculator {
         return (double) a / b;
     }
 }
+class CalculatorTest {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
 
+        // Test addition
+        System.out.println("Addition: " + calculator.add(5, 3)); // Output: 8
+
+        // Test subtraction
+        System.out.println("Subtraction: " + calculator.subtract(5, 3)); // Output: 2
+
+        // Test multiplication
+        System.out.println("Multiplication: " + calculator.multiply(5, 3)); // Output: 15
+
+        // Test division
+        try {
+            System.out.println("Division: " + calculator.divide(5, 3)); // Output: 1.666...
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+
+        // Test division by zero
+        try {
+            System.out.println("Division by zero: " + calculator.divide(5, 0));
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage()); // Output: Division by zero is not allowed.
+        }
+    }
+}
 class multiply {
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
@@ -73,5 +105,4 @@ class multiply {
         scanner.close();
     }
 }
-
 
