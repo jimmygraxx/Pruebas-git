@@ -64,6 +64,9 @@ class multiply {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
+        int b = 67;
+        int r = 45; 
+
         System.out.println("Enter first number: ");
         int num1 = scanner.nextInt();
 
